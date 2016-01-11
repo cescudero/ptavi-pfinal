@@ -8,6 +8,8 @@ import socketserver
 import sys
 import os
 import os.path
+from xml.sax import make_parser
+from xml.sax.handler import ContentHandler
 
 try:
     IP = sys.argv[1]
@@ -21,7 +23,7 @@ class EchoHandler(socketserver.DatagramRequestHandler):
     """
     Echo server class
     """
-    METHOD = ["INVITE", "BYE", "ACK"]
+    METHOD = ["INVITE", "BYE", "ACK", "REGISTER"]
 
     def handle(self):
         # Escribe dirección y puerto del cliente (de tupla client_address)

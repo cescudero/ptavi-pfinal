@@ -1,0 +1,7 @@
+<config>
+    <account username = "" passwd = "" />
+    <uaserver ip = "" puerto = "" />
+    <rtpaudio puerto = ""/>
+    <log path = "" />
+    <audio path = "" />
+</config>
